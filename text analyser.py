@@ -21,7 +21,7 @@ for customer in code:
 validation = inputu + inputp
 if validation in valid_user:
     print(f"""
-    python projekt1.py \n username: {inputu} \n password: {inputp}
+python projekt1.py \n username: {inputu} \n password: {inputp}
 Welcome to the app, {inputu}  \n"We have 3 texts to be analyzed
     """)
 else:
