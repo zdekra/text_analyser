@@ -21,9 +21,9 @@ for customer in code:
 validation = inputu + inputp
 if validation in valid_user:
     print(f"""
-python projekt1.py \n username: {inputu} \n password: {inputp}
-Welcome to the app, {inputu}  \n"We have 3 texts to be analyzed
+python projekt1.py \n username: {inputu} \n password: {inputp}\n{"-"*40}
+Welcome to the app, {inputu}  \n"We have 3 texts to be analyzed\n{"-"*40}
     """)
 else:
-    print("unregistered user terminating the program..")   
+    print("unregistered user terminating the program.")   
     #exit()
