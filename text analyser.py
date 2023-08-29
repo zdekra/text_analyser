@@ -9,8 +9,8 @@ discord: zdenekkrafka#2447
 
 user = ("bob", "ann", "mike", "liz")
 password = ("123", "pass123", "password123", "pass123")
-inputu = input("Zadej své jméno:  ")
-inputp = input("Zadej své heslo:  ")
+input_user = input("Zadej své jméno:  ")
+input_password = input("Zadej své heslo:  ")
 code = zip(user, password)
 
 valid_user = []
@@ -18,11 +18,11 @@ for customer in code:
     string = "".join(customer)
     valid_user.append(string)
 
-validation = inputu + inputp
+validation = input_user + input_password
 if validation in valid_user:
     print(f"""
-python projekt1.py \n username: {inputu} \n password: {inputp}\n{"-"*40}
-Welcome to the app, {inputu}  \n"We have 3 texts to be analyzed\n{"-"*40}
+python projekt1.py \n username: {input_user} \n password: {input_password}\n{"-"*40}
+Welcome to the app, {input_user}  \n"We have 3 texts to be analyzed\n{"-"*40}
     """)
 else:
     print("unregistered user terminating the program.")   
