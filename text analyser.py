@@ -61,6 +61,9 @@ if cislo_textu == str(1):
             numeric_sum += int(item)
             number += 1
     print("There are",number,"numeric strings.","\n""The sum of all the numbers",numeric_sum,"\n")
+    delka_slova = []
+    for slovo in jedna:
+        delka_slova.append(len(slovo))   
 elif cislo_textu == str(2):
     numeric_sum = 0
     number = 0
@@ -88,6 +91,9 @@ elif cislo_textu == str(2):
             numeric_sum += int(item)
             number += 1
     print("There is",number,"numeric string.","\n""The sum of all the numbers",numeric_sum,"\n")
+    delka_slova = []
+    for slovo in dva:
+        delka_slova.append(len(slovo))
 elif cislo_textu == str(3):
     numeric_sum = 0
     number = 0
@@ -115,7 +121,12 @@ elif cislo_textu == str(3):
             numeric_sum += int(item)
             number += 1
     print("There are",number,"numeric strings.","\n""The sum of all the numbers",numeric_sum,"\n")
+    delka_slova = []
+    for slovo in tri:
+        delka_slova.append(len(slovo))
 else: 
     print("Nezadáno správné číslo textu.")
+
+#print(sorted(delka_slova))    (vypočtená délka slov v litu -  převedeno na číselnou hodnotu)
 
     
