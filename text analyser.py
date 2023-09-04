@@ -24,12 +24,13 @@ if validation in valid_user:
     print(f"""
 python projekt1.py \n username: {input_user} \n password: {input_password}\n{"-"*40}
 Welcome to the app, {input_user}  \n"We have 3 texts to be analyzed\n{"-"*40}
-    """)
+""")
 else:
     print("unregistered user terminating the program.") 
     exit()
+cislo_textu = input(f"Enter a number btw. 1 and 3 to select:  ")
+print("-"*40, "\n")
 
-cislo_textu = input("zadej číslo textu....")
 jedna = ((TEXTS)[0]).split()
 dva = ((TEXTS)[1]).split()
 tri = ((TEXTS)[2]).split()
@@ -42,24 +43,24 @@ if cislo_textu == str(1):
     lowercase = int()
     for item in jedna:
         pocet_slov += 1
-    print("počet slov v textu", pocet_slov)
+    print("There are", pocet_slov, "words in the selected text.")
     for item in jedna:
         if item[0].isupper():
             capitall += 1
-    print("Počet slov s velkým písmenem je: ", capitall)
+    print("There are", capitall, "titlecase words.")
     for item in jedna:
         if item[::].isupper() and item[::].isalpha():
             uppercase += 1
-    print("Slova psaná jen velkými písmeny:  ",uppercase)
+    print("There are", uppercase, "uppecase words.")
     for item in jedna:
         if item[::].islower() and item[::].isalpha:
             lowercase += 1
-    print("Slova psaná jen malými písmeny: ",lowercase)
+    print("There are", lowercase, "lowercase words.")
     for item in jedna:
         if item.isnumeric():
             numeric_sum += int(item)
             number += 1
-    print("Počet číselných stringů: ",number,"\n""Součet číselných hodnot:",numeric_sum,"\n")
+    print("There are",number,"numeric strings.","\n""The sum of all the numbers",numeric_sum,"\n")
 elif cislo_textu == str(2):
     numeric_sum = 0
     number = 0
@@ -69,21 +70,24 @@ elif cislo_textu == str(2):
     lowercase = int()
     for item in dva:
         pocet_slov += 1
-    print("počet slov v textu", pocet_slov)
-    for item in dva:
-        if item[::].isupper():
+    print("There are", pocet_slov, "words in the selected text.")
+    for item in jedna:
+        if item[0].isupper():
+            capitall += 1
+    print("There are", capitall, "titlecase words.")
+    for item in jedna:
+        if item[::].isupper() and item[::].isalpha():
             uppercase += 1
-    print("Slova psaná jen velkými písmeny: ",uppercase)
-    for item in dva:
-        if item[::].islower():
+    print("There are", uppercase, "uppecase words.")
+    for item in jedna:
+        if item[::].islower() and item[::].isalpha:
             lowercase += 1
-    print("Slova psaná jen malými písmeny: ",lowercase)
-    print("Počet slov s velkým písmenem je: ", capitall)
+    print("There are", lowercase, "lowercase words.")
     for item in dva:
         if item.isnumeric():
             numeric_sum += int(item)
             number += 1
-    print("Počet číselných stringů: ",number,"\n""Součet číselných hodnot:",numeric_sum,"\n")
+    print("There is",number,"numeric string.","\n""The sum of all the numbers",numeric_sum,"\n")
 elif cislo_textu == str(3):
     numeric_sum = 0
     number = 0
@@ -93,24 +97,24 @@ elif cislo_textu == str(3):
     lowercase = int()
     for item in tri:
         pocet_slov += 1
-    print("počet slov v textu", pocet_slov)
+    print("There are", pocet_slov, "words in the selected text.")
     for item in tri:
         if item[0].isupper():
             capitall += 1
-    print("Počet slov s velkým písmenem je: ", capitall)
+    print("There are", capitall, "titlecase words.")
     for item in tri:
         if item[::].isupper():
             uppercase += 1
-    print("Slova psaná jen velkými písmeny: ",uppercase)
+    print("There are", uppercase, "uppercase words.")
     for item in tri:
         if item[::].islower():
             lowercase += 1
-    print("Slova psaná jen malými písmeny: ",lowercase)
+    print("There are", lowercase, "lowercase words.")
     for item in tri:
         if item.isnumeric():
             numeric_sum += int(item)
             number += 1
-    print("Počet číselných stringů:",number,"\n""Součet číselných hodnot:",numeric_sum,"\n")
+    print("There are",number,"numeric strings.","\n""The sum of all the numbers",numeric_sum,"\n")
 else: 
     print("Nezadáno správné číslo textu.")
 
