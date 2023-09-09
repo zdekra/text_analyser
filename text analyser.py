@@ -135,7 +135,23 @@ elif cislo_textu == str(3):
         delka_slova.append(len(slovo))
 else: 
     print("Nezadáno správné číslo textu.")
+    exit()
+#print(sorted(delka_slova))    (vypočtená délka slov v listu -  převedeno na číselnou hodnotu)
+#print((delka_slova))
+occurrences = {}
+for num in sorted(delka_slova):
+    if num in occurrences:
+        occurrences[num] += 1
+    else:
+        occurrences[num] = 1
 
-#print(sorted(delka_slova))    (vypočtená délka slov v litu -  převedeno na číselnou hodnotu)
+print("----------------------------------------")
+print("  LEN |  OCCURENCES               |NR.")
+print("----------------------------------------")   
+for num, pocet in occurrences.items():
+    if num >= 10:
+        print(f"  {num}  |{'*' * pocet}{' ' * (17 - pocet)}{' '}         |{pocet}")
+    else:
+        print(f"   {num}  |{'*' * pocet}{' ' * (17 - pocet)}          |{pocet}")
 
-    
+
