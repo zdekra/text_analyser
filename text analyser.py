@@ -31,9 +31,18 @@ else:
 cislo_textu = input(f"Enter a number btw. 1 and 3 to select:  ")
 print("-"*40, "\n")
 
-jedna = ((TEXTS)[0]).split()
-dva = ((TEXTS)[1]).split()
-tri = ((TEXTS)[2]).split()
+jedna = list()
+for slovo in ((TEXTS)[0]).split():
+    jedna.append(slovo.strip(",.:;"))
+
+dva = list()
+for slovo in ((TEXTS)[1]).split():
+    dva.append(slovo.strip(",.:;"))
+
+tri = list()
+for slovo in ((TEXTS)[2]).split():
+    tri.append(slovo.strip(",.:;"))
+
 if cislo_textu == str(1):
     numeric_sum = 0 #součet 
     number = 0
