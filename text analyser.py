@@ -154,4 +154,4 @@ for num, pocet in occurrences.items():
     else:
         print(f"   {num}  |{'*' * pocet}{' ' * (17 - pocet)}          |{pocet}")
 
-
+print("\n")
