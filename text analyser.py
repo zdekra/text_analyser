@@ -21,8 +21,6 @@ if user in users:
 python projekt1.py \n username: {user} \n password: {password}\n{"-"*40}
 Welcome to the app, {user}  \n"We have 3 texts to be analyzed\n{"-"*40}
     """)
-    # else:
-    #     print("Heslo je nesprávné.")
 else:
     print("unregistered user terminating the program.")
     exit()
